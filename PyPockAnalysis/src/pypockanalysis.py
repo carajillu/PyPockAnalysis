@@ -17,7 +17,7 @@ def align(tpr,trr):
     nameOut=extract_reference(tpr,trr)
     myMD=md.Universe(tpr,trr)
     ref=md.Universe(tpr,nameOut)
-    rms_fit_trj(myMD,ref,select='name CA')
+    rms_fit_trj(myMD,ref,select='name CA')cd
         
 
 #########################################
