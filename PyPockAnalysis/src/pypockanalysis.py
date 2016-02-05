@@ -36,18 +36,18 @@ def splitPDB(tpr,nameAli,resToIgnore,ext):
     mkdir='mkdir '+dirName
     os.system(mkdir)
     listName=dirName+'.txt'
-    frameList=[]
+    pdbList=[]
     fileout=open(listName,'w')
     i=0
     for ts in myMD.trajectory:
         PDBOut=dirName+'/'+trr.split('.')[0]+'_'+'0'*(5-len(str(i)))+str(i)+'.'+ext
         fileout.write(PDBOut+'\n')
-        frameList.append(PDBOut)
+        pdbList.append(PDBOut)
         md.Writer(PDBOut).write(atomGroup)
         print 'wrote file '+PDBOut
         i=i+1
     fileout.close()
-    return frameList
+    return pdbList
 
 #########################################
 # SECTION POCKET HUNTING                #
@@ -128,7 +128,7 @@ def genPDBQT(pdbList):
     return pdbqtList
         
 
-def vina_ensemble(pdbqtList,pockFrame,ligand):
+def vina_ensemble(pdbqtList,pockFrame,ligands):
     # define box center and size
     pocket=pockFrame.split('.')[0]+'_out/pockets/pocket0_vert.pqr'
     pocketIn=open(pocket,'r')
@@ -145,32 +145,40 @@ def vina_ensemble(pdbqtList,pockFrame,ligand):
             continue
     center=[numpy.mean(x),numpy.mean(y),numpy.mean(z)]
     size=[abs(max(x)-min(x)),abs(max(y)-min(y)),abs(max(z)-min(z))]
+
+    for ligand in ligands:
+       lig=ligand.split('.')[0]
+       command='mkdir splitPDBQT/'+lig
+       os.system(command)
+
+       # Generate vina input file
+       vinaPar='ligand = '+ligand+'\n'+\
+               'center_x = '+str(center[0])+'\n'+\
+               'center_y = '+str(center[1])+'\n'+\
+               'center_z = '+str(center[2])+'\n'+\
+               'size_x = '+str(size[0])+'\n'+\
+               'size_y = '+str(size[1])+'\n'+\
+               'size_z = '+str(size[2])+'\n'+\
+               'num_modes = 10'
+       vinaConfName='splitPDBQT/'+lig+'/vina.txt'
+       vinaConf=open(vinaConfName,'w')
+       vinaConf.write(vinaPar)
+       vinaConf.close()
     
-    # Generate vina input file
-    vinaPar='ligand = '+ligand+'\n'+\
-            'center_x = '+str(center[0])+'\n'+\
-            'center_y = '+str(center[1])+'\n'+\
-            'center_z = '+str(center[2])+'\n'+\
-            'size_x = '+str(size[0])+'\n'+\
-            'size_y = '+str(size[1])+'\n'+\
-            'size_z = '+str(size[2])+'\n'+\
-            'num_modes = 10'
-    vinaConf=open('vina.txt','w')
-    vinaConf.write(vinaPar)
-    vinaConf.close()
-    
-    # Run Docking     
-    for frame in pdbqtList:
-        print "docking "+ligand+" in frame "+frame
-        dirName=frame.split('.')[0]+'_docked'
-        mkdir='mkdir '+dirName
-        os.system(mkdir)
-        docking='vina --config vina.txt '+\
-                '--receptor '+frame+' '+\
-                '--out '+dirName+'/out.pdbqt '+\
-                '--log '+dirName+'/log.txt '
-        print docking
-        os.system(docking)
+       # Run Docking     
+       for frame in pdbqtList:
+           print "docking "+ligand+" in frame "+frame
+          # dirName=lig+'/'+frame.split('.')[0]+'_docked'
+           dirName=frame.split('/')[0]+'/'+lig+'/'+frame.split('/')[1].split('.')[0]+'_docked'
+           mkdir='mkdir '+dirName
+           print mkdir
+           os.system(mkdir)
+           docking='vina --config '+vinaConfName+\
+                   ' --receptor '+frame+' '+\
+                   '--out '+dirName+'/out.pdbqt '+\
+                   '--log '+dirName+'/log.txt '
+           print docking
+           os.system(docking)
     return 0
 
 #########################################
@@ -206,17 +214,24 @@ def HbondCalc(resOfInt,tpr,trr):
 
 tpr=sys.argv[1]
 trr=sys.argv[2]
-ligand=sys.argv[3]
-resToIgnore=['SOL','NA','CL',ligand.split('.')[0]] # maybe you don't need to ignore the ligand...
+resToIgnore=['SOL','NA','CL'] # maybe you don't need to ignore the ligand...
+ligands=[]
+lig=''
+while lig!='STOP':
+   lig=raw_input('Enter the name of the ligand or STOP to finish: ')
+   if lig!='STOP':
+      ligands.append(lig)
+      resToIgnore.append(lig.split('.')[0])
+      
 
 if '-split' in sys.argv:
    nameAli=align(tpr,trr)
    pdbList=splitPDB(tpr,nameAli,resToIgnore,'pdb')
 else:
-   frameList=[]
+   pdbList=[]
    filein=open('splitPDB.txt','r')
    for line in filein:
-      frameList.append(line.strip('\n'))
+      pdbList.append(line.strip('\n'))
 
 if '-hbond' in sys.argv:
     resOfInt=[]
@@ -239,34 +254,5 @@ if '-docking' in sys.argv:
        command='fpocket -f '+pdbList[0]
        os.system(command)
     pdbqtList=genPDBQT(pdbList)
-    vina_ensemble(pdbqtList,pdbList[0],ligand)
+    vina_ensemble(pdbqtList,pdbList[0],ligands)
     
-
-
-
-
-
-
-
-
-
-
-#HbondCalc(resOfInt,tpr,trr)
-
-#nameAli=align(tpr,trr)
-#pdbList=splitPDB(tpr,nameAli,resToIgnore,'pdb')
-#runFPocket(pdbList)
-#Fpocket_analysis(pdbList,trr)
-#runMDPocket(pdbList)
-
-#pdbqtList=splitPDB(tpr,nameAli,resToIgnore,'pdbqt')
-#pdbqtList=genPDBQT(pdbList)
-'''
-for snapshot in mol2List:
-    pdbqtName=snapshot.split('.')[0]+'.pdbqt'
-    conversion='/usr/local/MGLTools-1.5.6/bin/pythonsh '+\
-               '/usr/local/MGLTools-1.5.6/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_receptor4.py '+\
-               '-r '+snapshot+' -o '+pdbqtName
-    pdbqtList.append(pdbqtName)'''
-    
-#vina_ensemble(pdbqtList,pdbList[0],ligand)
