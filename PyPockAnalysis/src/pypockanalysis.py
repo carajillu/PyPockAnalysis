@@ -225,7 +225,7 @@ if '-hbond' in sys.argv:
         entry=raw_input('Enter a residue number (they begin at 0) or STOP to finish: ')
         if entry!='STOP':
             resOfInt.append(entry)  
-        HbondCalc(resOfInt,tpr,trr)
+    HbondCalc(resOfInt,tpr,trr)
 
 if '-fpocket' in sys.argv:
     runFPocket(pdbList)
