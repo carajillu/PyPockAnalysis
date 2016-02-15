@@ -9,7 +9,9 @@ import os, sys, math, numpy
 ###########################
 
 def extract_reference(tpr,trr):
-    doc=''' This function just extracts the first frame of a trr trajectory'''
+    doc=''' This function just extracts the first frame of a trr trajectory.
+            Not to use for aligning, it is always better if you align to the
+            crystal structure'''
     myMD=md.Universe(tpr,trr)
     atomGroup=myMD.select_atoms('all')
     #extract the reference frame
@@ -17,9 +19,8 @@ def extract_reference(tpr,trr):
     md.Writer(nameOut).write(atomGroup)
     return nameOut
 
-def align(tpr,trr):
+def align(tpr,trr,nameRef):
     doc='''this function aligns the whole trajectory to the fist frame'''
-    nameRef=extract_reference(tpr,trr)
     myMD=md.Universe(tpr,trr)
     ref=md.Universe(tpr,nameRef)
     nameAli=trr.split('.')[0]+'_ali.trr'
@@ -60,11 +61,11 @@ def runFPocket(pdbList):
         os.system(command)
     return 0
 
-def runMDPocket(pdbList):
+def runMDPocket(pdbList,nameRef):
     if '-fpocket' not in sys.argv:
-       command='fpocket -f '+pdbList[0]
+       command='fpocket -f '+nameRef
        os.system(command)
-    alphaSph=pdbList[0].split('.')[0]+'_out/pockets/pocket0_vert.pqr'
+    alphaSph=nameRef.split('.')[0]+'_out/pockets/pocket0_vert.pqr'
     print "Running mdpocket starting at file: ",pdbList[0]
     command='mdpocket -L splitPDB.txt -f '+alphaSph
     print command
@@ -109,7 +110,9 @@ def genPDBQT(pdbList):
     I am NOT doing this with MDAnalysis because Vina doesn't take the pdbqt
     files produced by it. To make it work with cofactors, you have to trick
     the file MoleculePreparation.py (in AutoDockTools dir) to accept the
-    resname of the cofactor
+    resname of the cofactor.
+    I think that it understands the cofactor topology but I am not sure.
+    Use this at your own risk.
     '''
     ligprep='/usr/local/MGLTools-1.5.6/bin/pythonsh '+\
             '/usr/local/MGLTools-1.5.6/MGLToolsPckgs/AutoDockTools/'+\
@@ -128,9 +131,13 @@ def genPDBQT(pdbList):
     return pdbqtList
         
 
-def vina_ensemble(pdbqtList,pockFrame,ligands):
-    # define box center and size
-    pocket=pockFrame.split('.')[0]+'_out/pockets/pocket0_vert.pqr'
+def fpocket_docking_site(nameRef):
+    doc='''
+        This funtion makes a vina suitable input file from a binding site 
+        computed by fpocket. NOT recommended for normal docking, as fpocket
+        does not always find the correct binding site
+        '''
+    pocket=nameRef.split('.')[0]+'_out/pockets/pocket0_vert.pqr'
     pocketIn=open(pocket,'r')
     x=[]
     y=[]
@@ -145,7 +152,9 @@ def vina_ensemble(pdbqtList,pockFrame,ligands):
             continue
     center=[numpy.mean(x),numpy.mean(y),numpy.mean(z)]
     size=[abs(max(x)-min(x)),abs(max(y)-min(y)),abs(max(z)-min(z))]
+    return center, size
 
+def vina_ensemble(pdbqtList,ligands,center,size):
     for ligand in ligands:
        lig=ligand.split('.')[0]
        command='mkdir splitPDBQT/'+lig
@@ -214,18 +223,19 @@ def HbondCalc(resOfInt,tpr,trr):
 
 tpr=sys.argv[1]
 trr=sys.argv[2]
-resToIgnore=['SOL','NA','CL'] # maybe you don't need to ignore the ligand...
+nameRef=sys.argv[3]
+resToIgnore=['SOL','WAT','HOH','NA','CL'] # maybe you don't need to ignore the ligand...
 ligands=[]
 lig=''
 while lig!='STOP':
-   lig=raw_input('Enter the name of the ligand or STOP to finish: ')
+   lig=raw_input('Enter the name of the ligand PDBQT file or STOP to finish: ')
    if lig!='STOP':
       ligands.append(lig)
       resToIgnore.append(lig.split('.')[0])
       
 
 if '-split' in sys.argv:
-   nameAli=align(tpr,trr)
+   nameAli=align(tpr,trr,nameRef)
    pdbList=splitPDB(tpr,nameAli,resToIgnore,'pdb')
 else:
    pdbList=[]
@@ -248,11 +258,27 @@ if '-fpocket' in sys.argv:
 
 if '-mdpocket' in sys.argv:
     runMDPocket(pdbList)
+
+if '-vina' in sys.argv:
+    print 'Defining binding site. Units are angstrom:'
+    center=[]
+    center.append(raw_input("Enter the x component of the center: "))
+    center.append(raw_input("Enter the y component of the center: "))
+    center.append(raw_input("Enter the z component of the center: "))
     
-if '-docking' in sys.argv:
+    size=[]
+    size.append(raw_input("give me the size in the x axis: "))
+    size.append(raw_input("give me the size in the y axis: "))
+    size.append(raw_input("give me the size in the z axis: "))
+    
+    pdbqtList=genPDBQT(pdbList)
+    vina_ensemble(pdbqtList,ligands,center,size)
+    
+if '-fpocket_docking' in sys.argv:
     if '-fpocket' not in sys.argv:
-       command='fpocket -f '+pdbList[0]
+       command='fpocket -f '+nameRef
        os.system(command)
     pdbqtList=genPDBQT(pdbList)
-    vina_ensemble(pdbqtList,pdbList[0],ligands)
+    center,size=fpocket_docking_site(nameRef)
+    vina_ensemble(pdbqtList,ligands,center,size)
     

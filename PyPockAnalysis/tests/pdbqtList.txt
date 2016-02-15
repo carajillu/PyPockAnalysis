@@ -1,0 +1,11 @@
+splitPDBQT/1HNN_complex_test_00000.pdbqt
+splitPDBQT/1HNN_complex_test_00001.pdbqt
+splitPDBQT/1HNN_complex_test_00002.pdbqt
+splitPDBQT/1HNN_complex_test_00003.pdbqt
+splitPDBQT/1HNN_complex_test_00004.pdbqt
+splitPDBQT/1HNN_complex_test_00005.pdbqt
+splitPDBQT/1HNN_complex_test_00006.pdbqt
+splitPDBQT/1HNN_complex_test_00007.pdbqt
+splitPDBQT/1HNN_complex_test_00008.pdbqt
+splitPDBQT/1HNN_complex_test_00009.pdbqt
+splitPDBQT/1HNN_complex_test_00010.pdbqt

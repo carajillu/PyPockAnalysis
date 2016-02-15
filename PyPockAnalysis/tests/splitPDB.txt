@@ -1,0 +1,11 @@
+splitPDB/1HNN_complex_test_00000.pdb
+splitPDB/1HNN_complex_test_00001.pdb
+splitPDB/1HNN_complex_test_00002.pdb
+splitPDB/1HNN_complex_test_00003.pdb
+splitPDB/1HNN_complex_test_00004.pdb
+splitPDB/1HNN_complex_test_00005.pdb
+splitPDB/1HNN_complex_test_00006.pdb
+splitPDB/1HNN_complex_test_00007.pdb
+splitPDB/1HNN_complex_test_00008.pdb
+splitPDB/1HNN_complex_test_00009.pdb
+splitPDB/1HNN_complex_test_00010.pdb
