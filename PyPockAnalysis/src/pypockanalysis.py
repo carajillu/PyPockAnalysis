@@ -62,9 +62,8 @@ def runFPocket(pdbList):
     return 0
 
 def runMDPocket(pdbList,nameRef):
-    if '-fpocket' not in sys.argv:
-       command='fpocket -f '+nameRef
-       os.system(command)
+    command='fpocket -f '+nameRef
+    os.system(command)
     alphaSph=nameRef.split('.')[0]+'_out/pockets/pocket0_vert.pqr'
     print "Running mdpocket starting at file: ",pdbList[0]
     command='mdpocket -L splitPDB.txt -f '+alphaSph
@@ -128,6 +127,7 @@ def genPDBQT(pdbList):
         os.system(command)
         pdbqtList.append(snapOut)
         fileout.write(snapOut+'\n')
+    fileout.close()
     return pdbqtList
         
 
@@ -152,6 +152,7 @@ def fpocket_docking_site(nameRef):
             continue
     center=[numpy.mean(x),numpy.mean(y),numpy.mean(z)]
     size=[abs(max(x)-min(x)),abs(max(y)-min(y)),abs(max(z)-min(z))]
+    pocketIn.close()
     return center, size
 
 def vina_ensemble(pdbqtList,ligands,center,size):
@@ -190,10 +191,67 @@ def vina_ensemble(pdbqtList,ligands,center,size):
            os.system(docking)
     return 0
 
+def get_vina_scores(ligands,pdbqtList):
+    scores={}
+    for ligand in ligands:
+        lig=ligand.split('.')[0]
+        scores[lig]=[]
+        for snapshot in pdbqtList:
+            nameIn='splitPDBQT/'+ligand.split('.')[0]+'/'+\
+                    snapshot.split('/')[1].split('.')[0]+'_docked/log.txt'
+            #print nameIn
+            filein=open(nameIn,'r')
+            energy=float(filein.readlines()[25][12:19])
+            scores[lig].append(energy)    
+            filein.close()
+    return scores
+
+def get_vina_rmsd(ligands,pdbqtList):
+    rmsd={}
+    for ligand in ligands:
+        lig=ligand.split('.')[0]
+        refStruct=lig+'_refStruct.pdb' # might or might not be a copy of ref
+        reftpr=lig+'_refTop.tpr' # might ot might not be a copy of tpr
+        rmsd[lig]=[]
+        for snapshot in pdbqtList:
+            nameIn='splitPDBQT/'+ligand.split('.')[0]+'/'+\
+                    snapshot.split('/')[1].split('.')[0]+'_docked/out.pdbqt'
+            nameMod1='splitPDBQT/'+ligand.split('.')[0]+'/'+\
+                    snapshot.split('/')[1].split('.')[0]+'_docked/model1.pdbqt'
+            filein=open(nameIn,'r')
+            fileout=open(nameMod1,'w')
+            for line in filein:
+                if 'MODEL 2' in line:
+                    break
+                fileout.write(line)
+            fileout.close()
+            filein.close()
+            dockPose=md.Universe(nameMod1)
+            dockAtoms=dockPose.select_atoms('not name H*') #
+            mobile=dockAtoms.coordinates()
+            expPose=md.Universe(reftpr,refStruct)
+            expAtoms=expPose.select_atoms('(resname '+lig+') and (not name H*)')
+            static=expAtoms.coordinates()
+            rmsd[lig].append(rms.rmsd(static,mobile))
+    return rmsd
+
+def vina_plot(scores,rmsd,lignads):
+    for ligand in ligands:
+        lig=ligand.split('.')[0]
+        nameOut=lig+'_dockAnalysis.out'
+        fileout=open(nameOut,'w')
+        fileout.write('Snapshot Score RMSD\n')
+        for i in range(0,len(rmsd[lig])):
+            line=str(scores[lig][i])+' '+str(rmsd[lig][i])+'\n'
+            fileout.write(line)            
+    return 0  
+            
+    
+
 #########################################
 # SECTION HBONDS                        #
 #########################################
-def HbondCalc(resOfInt,tpr,trr):
+def hbond_calc(resOfInt,tpr,trr):
     for residue in resOfInt:
         myMD=md.Universe(tpr,trr)
         resid='resid '+residue+' and not backbone'
@@ -203,7 +261,6 @@ def HbondCalc(resOfInt,tpr,trr):
         Hbonds=h.timeseries
         nameOut='hbonds_'+residue+'.txt'
         fileout=open(nameOut,'w')
-        hbList=[]
         for frame in Hbonds:
             line=[frame[0][2].split(':')[0]]
             for bond in frame:
@@ -232,7 +289,6 @@ while lig!='STOP':
    if lig!='STOP':
       ligands.append(lig)
       resToIgnore.append(lig.split('.')[0])
-      
 
 if '-split' in sys.argv:
    nameAli=align(tpr,trr,nameRef)
@@ -250,7 +306,7 @@ if '-hbond' in sys.argv:
         entry=raw_input('Enter a residue number (they begin at 0) or STOP to finish: ')
         if entry!='STOP':
             resOfInt.append(entry)  
-    HbondCalc(resOfInt,tpr,trr)
+    hbond_calc(resOfInt,tpr,trr)
 
 if '-fpocket' in sys.argv:
     runFPocket(pdbList)
@@ -273,6 +329,8 @@ if '-vina' in sys.argv:
     
     pdbqtList=genPDBQT(pdbList)
     vina_ensemble(pdbqtList,ligands,center,size)
+    scores=get_vina_scores(ligands,pdbqtList)
+    rmsd=get_vina_rmsd(ligands,pdbqtList)
     
 if '-fpocket_docking' in sys.argv:
     if '-fpocket' not in sys.argv:
@@ -281,4 +339,12 @@ if '-fpocket_docking' in sys.argv:
     pdbqtList=genPDBQT(pdbList)
     center,size=fpocket_docking_site(nameRef)
     vina_ensemble(pdbqtList,ligands,center,size)
-    
+
+if '-vina_analysis' in sys.argv:
+    pdbqtList=[]
+    filein=open('pdbqtList.txt','r')
+    for line in filein:
+        pdbqtList.append(line)
+    scores=get_vina_scores(ligands,pdbqtList)
+    rmsd=get_vina_rmsd(ligands,pdbqtList)
+    vina_plot(scores,rmsd,ligands)
