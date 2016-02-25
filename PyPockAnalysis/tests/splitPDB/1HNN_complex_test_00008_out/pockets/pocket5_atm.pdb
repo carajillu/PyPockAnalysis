@@ -1,0 +1,59 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     6:
+HEADER 0  - Pocket Score                      : 0.0790
+HEADER 1  - Drug Score                        : 0.0061
+HEADER 2  - Number of V. Vertices             :    58
+HEADER 3  - Mean alpha-sphere radius          : 3.8927
+HEADER 4  - Mean alpha-sphere SA              : 0.5367
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 8.0000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Volume Score                      : 3.4444
+HEADER 9  - Real volume (approximation)       : 471.9080
+HEADER 10 - Charge Score                      :    -1
+HEADER 11 - Local hydrophobic density Score   : 12.0000
+HEADER 12 - Number of apolar alpha sphere     :    15
+HEADER 13 - Proportion of apolar alpha sphere : 0.2586
+ATOM   2832  OD1 ASP B 186      50.161  62.273  10.063  1.00  0.00           O 0
+ATOM   2778   CG ARG B 183      54.556  59.650   9.156  1.00  0.00           C 0
+ATOM   2784   NE ARG B 183      55.284  61.072   7.281  1.00  0.00           N 0
+ATOM   2781   CD ARG B 183      55.573  60.674   8.658  1.00  0.00           C 0
+ATOM   2770    O GLN B 182      54.338  62.342  13.047  1.00  0.00           O 0
+ATOM   2773   CA ARG B 183      54.536  59.975  11.687  1.00  0.00           C 0
+ATOM   2828   CB ASP B 186      51.110  61.928  12.261  1.00  0.00           C 0
+ATOM     11   CG PRO B   1      52.136  57.282   7.461  1.00  0.00           C 0
+ATOM   2849  CD2 HIS B 187      49.927  57.670  11.402  1.00  0.00           C 0
+ATOM   2848  NE2 HIS B 187      49.914  56.915  10.230  1.00  0.00           N 0
+ATOM   2794    O ARG B 183      52.705  58.877  12.669  1.00  0.00           O 0
+ATOM   2769    C GLN B 182      55.475  61.899  12.901  1.00  0.00           C 0
+ATOM   2758   CB GLN B 182      57.124  63.720  12.635  1.00  0.00           C 0
+ATOM   2765  OE1 GLN B 182      58.219  66.946  12.318  1.00  0.00           O 0
+ATOM   3554   NE ARG B 232      57.683  69.475  10.898  1.00  0.00           N 0
+ATOM   2766  NE2 GLN B 182      59.550  65.289  11.716  1.00  0.00           N 0
+ATOM   2790  NH2 ARG B 183      55.668  61.404   5.047  1.00  0.00           N 0
+ATOM   2717   CB ALA B 179      60.910  61.313   8.730  1.00  0.00           C 0
+ATOM   2722    O ALA B 179      58.393  60.673  10.723  1.00  0.00           O 0
+ATOM   2715   CA ALA B 179      60.541  61.540  10.194  1.00  0.00           C 0
+ATOM   3551   CD ARG B 232      56.535  70.138  10.279  1.00  0.00           C 0
+ATOM   2764   CD GLN B 182      58.576  65.782  12.484  1.00  0.00           C 0
+ATOM   2786   CZ ARG B 183      55.949  60.728   6.170  1.00  0.00           C 0
+ATOM   3548   CG ARG B 232      55.305  70.081  11.179  1.00  0.00           C 0
+ATOM   3572   OG SER B 233      53.742  66.124  15.164  1.00  0.00           O 0
+ATOM   2761   CG GLN B 182      57.876  64.798  13.411  1.00  0.00           C 0
+ATOM   3545   CB ARG B 232      55.544  70.285  12.673  1.00  0.00           C 0
+ATOM   2826   CA ASP B 186      50.649  61.844  13.713  1.00  0.00           C 0
+ATOM   3569   CB SER B 233      52.573  66.707  15.695  1.00  0.00           C 0
+ATOM   3575    O SER B 233      49.887  67.644  15.706  1.00  0.00           O 0
+ATOM   2882  OG1 THR B 189      49.437  63.870  17.492  1.00  0.00           O 0
+ATOM   2876   CB THR B 189      48.168  63.797  16.881  1.00  0.00           C 0
+ATOM   2833  OD2 ASP B 186      49.031  63.008  11.723  1.00  0.00           O 0
+ATOM   3567   CA SER B 233      52.054  67.831  14.802  1.00  0.00           C 0
+ATOM   2831   CG ASP B 186      50.006  62.349  11.301  1.00  0.00           C 0
+ATOM   3564    O ARG B 232      52.375  69.608  12.627  1.00  0.00           O 0
+ATOM   2878  CG2 THR B 189      47.686  65.221  17.146  1.00  0.00           C 0
+ATOM   3563    C ARG B 232      53.215  69.654  13.522  1.00  0.00           C 0
+TER
+END

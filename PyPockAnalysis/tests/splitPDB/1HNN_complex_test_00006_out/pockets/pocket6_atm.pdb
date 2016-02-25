@@ -1,0 +1,44 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     7:
+HEADER 0  - Pocket Score                      : 8.6082
+HEADER 1  - Drug Score                        : 0.0518
+HEADER 2  - Number of V. Vertices             :    37
+HEADER 3  - Mean alpha-sphere radius          : 3.2472
+HEADER 4  - Mean alpha-sphere SA              : 0.3881
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 37.5385
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Volume Score                      : 4.5385
+HEADER 9  - Real volume (approximation)       : 104.5843
+HEADER 10 - Charge Score                      :     2
+HEADER 11 - Local hydrophobic density Score   : 21.0000
+HEADER 12 - Number of apolar alpha sphere     :    22
+HEADER 13 - Proportion of apolar alpha sphere : 0.5946
+ATOM    667   CG LEU B  45      57.825  60.616  40.252  1.00  0.00           C 0
+ATOM   1057   CG TYR B  72      56.824  56.305  36.847  1.00  0.00           C 0
+ATOM   1058  CD1 TYR B  72      56.739  57.600  36.320  1.00  0.00           C 0
+ATOM   1723  CD2 TYR B 113      59.212  55.897  41.336  1.00  0.00           C 0
+ATOM    595   CA GLY B  41      62.345  59.264  38.963  1.00  0.00           C 0
+ATOM   1054   CB TYR B  72      56.162  56.002  38.170  1.00  0.00           C 0
+ATOM    673  CD2 LEU B  45      56.450  60.098  39.838  1.00  0.00           C 0
+ATOM    599    O GLY B  41      60.704  61.014  38.961  1.00  0.00           O 0
+ATOM    651   CE LYS B  44      61.040  58.300  35.529  1.00  0.00           C 0
+ATOM   1721  CE2 TYR B 113      60.553  55.723  40.970  1.00  0.00           C 0
+ATOM    411  CE2 TYR B  27      60.849  54.103  36.446  1.00  0.00           C 0
+ATOM    654   NZ LYS B  44      61.478  57.114  34.778  1.00  0.00           N 0
+ATOM    413  CD2 TYR B  27      61.255  53.256  37.485  1.00  0.00           C 0
+ATOM   1719   OH TYR B 113      62.291  54.119  40.903  1.00  0.00           O 0
+ATOM    395    O ASN B  26      64.902  53.550  36.786  1.00  0.00           O 0
+ATOM    587  CG2 VAL B  40      66.403  58.376  36.148  1.00  0.00           C 0
+ATOM    593    N GLY B  41      63.631  59.624  38.399  1.00  0.00           N 0
+ATOM    478    O ARG B  31      66.810  55.921  38.991  1.00  0.00           O 0
+ATOM    485    O GLY B  32      65.002  54.940  42.873  1.00  0.00           O 0
+ATOM    484    C GLY B  32      65.908  54.838  42.049  1.00  0.00           C 0
+ATOM    511  CD2 LEU B  34      61.511  57.742  44.067  1.00  0.00           C 0
+ATOM    601   CD PRO B  42      63.249  60.550  41.469  1.00  0.00           C 0
+ATOM    497    O ASP B  33      66.198  58.321  42.706  1.00  0.00           O 0
+TER
+END

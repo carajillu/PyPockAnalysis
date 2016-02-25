@@ -4,101 +4,7 @@ from MDAnalysis.analysis.align import *
 import MDAnalysis.analysis.hbonds as hb
 import os, sys, math, numpy
 
-###########################
-# SECTION COORDINATES     #
-###########################
-
-def extract_reference(tpr,trr):
-    doc=''' This function just extracts the first frame of a trr trajectory.
-            Not to use for aligning, it is always better if you align to the
-            crystal structure'''
-    myMD=md.Universe(tpr,trr)
-    atomGroup=myMD.select_atoms('all')
-    #extract the reference frame
-    nameOut='ref.gro'
-    md.Writer(nameOut).write(atomGroup)
-    return nameOut
-
-def align(tpr,trr,nameRef):
-    doc='''this function aligns the whole trajectory to the fist frame'''
-    myMD=md.Universe(tpr,trr)
-    ref=md.Universe(tpr,nameRef)
-    nameAli=trr.split('.')[0]+'_ali.trr'
-    rms_fit_trj(myMD,ref,select='protein and name CA',filename=nameAli)
-    return nameAli
-
-def splitPDB(tpr,nameAli,resToIgnore,ext):
-    doc='''this function extracts all the frames of the trajectory in the 
-    chosen format'''
-    myMD=md.Universe(tpr,nameAli)
-    selection='not resname '+' and not resname '.join(resToIgnore)
-    atomGroup=myMD.select_atoms(selection)
-    dirName='split'+ext.upper()
-    mkdir='mkdir '+dirName
-    os.system(mkdir)
-    listName=dirName+'.txt'
-    pdbList=[]
-    fileout=open(listName,'w')
-    i=0
-    for ts in myMD.trajectory:
-        PDBOut=dirName+'/'+trr.split('.')[0]+'_'+'0'*(5-len(str(i)))+str(i)+'.'+ext
-        fileout.write(PDBOut+'\n')
-        pdbList.append(PDBOut)
-        md.Writer(PDBOut).write(atomGroup)
-        print 'wrote file '+PDBOut
-        i=i+1
-    fileout.close()
-    return pdbList
-
 #########################################
-# SECTION POCKET HUNTING                #
-#########################################
-
-def runFPocket(pdbList):
-    for snapshot in pdbList:
-        print 'Running Fpocket on file :'+snapshot
-        command='fpocket -f '+snapshot
-        os.system(command)
-    return 0
-
-def runMDPocket(pdbList,nameRef):
-    command='fpocket -f '+nameRef
-    os.system(command)
-    alphaSph=nameRef.split('.')[0]+'_out/pockets/pocket0_vert.pqr'
-    print "Running mdpocket starting at file: ",pdbList[0]
-    command='mdpocket -L splitPDB.txt -f '+alphaSph
-    print command
-    os.system(command)
-    return 0
-
-def Fpocket_analysis(pdbList,trr):
-    # Initializing pocket properties file
-    propName=trr.split('.')[0]+'_druggability.txt'
-    propOut=open(propName,'w')
-    propOut.write('Pocket_Score Drug_Score Num_Vornoi Mean_alpha_radius Mean_alpha_SA Mean_Bf Hydrophob_score Polar_score Vol_score Real_Vol Char_score Loc_hydroph_dens_score Num_apol_spheres Prop_apol_sph\n')
-    # Initializing pocket coordinates file
-    pocketName=trr.split('.')[0]+'_pocket.pqr'
-    pocketOut=open(pocketName,'w')
-    i=0
-    for snapshot in pdbList:
-       props=[]
-       SnapPocketName=snapshot.split('.')[0]+'_out/pockets/pocket0_vert.pqr'
-       snapPocketIn=open(SnapPocketName,'r')
-       print 'Opened file '+SnapPocketName+' for analysis'
-       pocketOut.write('MODEL '+str(i)+'\n')
-       i=i+1
-       for line in snapPocketIn:
-           if 'HEADER' in line and ' - ' in line:
-               props.append((line.split(':')[1]).strip('\n').strip(' '))
-           elif 'ATOM' in line:
-               pocketOut.write(line)
-       pocketOut.write('TER\nENDMDL\n\n')
-       props=(' '.join(props))+'\n'
-       propOut.write(props)
-       snapPocketIn.close()
-    propOut.close()
-    pocketOut.close()
-    return 0
 
 
 #########################################
@@ -202,6 +108,7 @@ def get_vina_scores(ligands,pdbqtList):
             #print nameIn
             filein=open(nameIn,'r')
             energy=float(filein.readlines()[25][12:19])
+            print "getting docking score for snapshot: "+nameIn
             scores[lig].append(energy)    
             filein.close()
     return scores
@@ -232,6 +139,7 @@ def get_vina_rmsd(ligands,pdbqtList):
             expPose=md.Universe(reftpr,refStruct)
             expAtoms=expPose.select_atoms('(resname '+lig+') and (not name H*)')
             static=expAtoms.coordinates()
+            print "calculating RMSD for snapshot: "+nameIn
             rmsd[lig].append(rms.rmsd(static,mobile))
     return rmsd
 
@@ -291,8 +199,9 @@ while lig!='STOP':
       resToIgnore.append(lig.split('.')[0])
 
 if '-split' in sys.argv:
-   nameAli=align(tpr,trr,nameRef)
-   pdbList=splitPDB(tpr,nameAli,resToIgnore,'pdb')
+   from coordinates import coordinates
+   nameAli=coordinates.align(tpr,trr,nameRef)
+   pdbList=coordinates.split(tpr,nameAli,resToIgnore,'pdb')
 else:
    pdbList=[]
    filein=open('splitPDB.txt','r')
@@ -309,11 +218,13 @@ if '-hbond' in sys.argv:
     hbond_calc(resOfInt,tpr,trr)
 
 if '-fpocket' in sys.argv:
-    runFPocket(pdbList)
-    Fpocket_analysis(pdbList,trr)
+    from pockets import pockets
+    pockets.runFPocket(pdbList)
+    pockets.fpocket_analysis(pdbList,trr)
 
 if '-mdpocket' in sys.argv:
-    runMDPocket(pdbList)
+    from pockets import pockets
+    pockets.runMDPocket(pdbList,nameRef,resToIgnore)
 
 if '-vina' in sys.argv:
     print 'Defining binding site. Units are angstrom:'

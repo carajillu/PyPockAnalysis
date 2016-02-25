@@ -1,0 +1,62 @@
+HEADER
+HEADER This is a pqr format file writen by the programm fpocket.                 
+HEADER It represent the voronoi vertices of a single pocket found by the         
+HEADER algorithm.                                                                
+HEADER                                                                           
+HEADER Information about the pocket     7:
+HEADER 0  - Pocket Score                      : 9.0814
+HEADER 1  - Drug Score                        : 0.0217
+HEADER 2  - Number of V. Vertices             :    40
+HEADER 3  - Mean alpha-sphere radius          : 3.6016
+HEADER 4  - Mean alpha-sphere SA              : 0.4479
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 24.5455
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Volume Score                      : 4.7273
+HEADER 9  - Real volume (approximation)       : 457.5884
+HEADER 10 - Charge Score                      :     0
+HEADER 11 - Local hydrophobic density Score   : 12.8750
+HEADER 12 - Number of apolar alpha sphere     :    16
+HEADER 13 - Proportion of apolar alpha sphere : 0.4000
+ATOM  10002  POL STP     7      69.354  59.791  41.768    0.00     3.47
+ATOM  12364 APOL STP     7      70.399  59.965  41.440    0.00     3.73
+ATOM   7273  POL STP     7      73.286  55.269  46.840    0.00     5.33
+ATOM   7273  POL STP     7      72.972  54.299  46.142    0.00     5.28
+ATOM   7273 APOL STP     7      72.713  54.480  45.674    0.00     4.93
+ATOM   7273 APOL STP     7      71.940  54.680  44.986    0.00     4.18
+ATOM   7273 APOL STP     7      70.536  54.253  45.381    0.00     3.32
+ATOM   7273 APOL STP     7      71.839  54.690  44.929    0.00     4.10
+ATOM   5006  POL STP     7      71.815  57.899  41.920    0.00     3.11
+ATOM   5969  POL STP     7      71.540  57.412  43.349    0.00     3.53
+ATOM   5969  POL STP     7      71.499  58.319  43.072    0.00     3.67
+ATOM  12354 APOL STP     7      71.877  58.000  41.265    0.00     3.03
+ATOM   7281  POL STP     7      72.158  58.667  44.128    0.00     3.71
+ATOM   5969  POL STP     7      71.350  58.815  42.908    0.00     3.77
+ATOM   7281  POL STP     7      71.345  58.845  42.869    0.00     3.76
+ATOM   7281  POL STP     7      71.372  58.819  42.943    0.00     3.76
+ATOM  10006  POL STP     7      69.707  59.111  42.653    0.00     3.26
+ATOM   5969  POL STP     7      71.264  56.896  43.476    0.00     3.35
+ATOM   7061 APOL STP     7      71.043  56.480  43.348    0.00     3.09
+ATOM   7273 APOL STP     7      71.733  56.034  44.322    0.00     3.66
+ATOM   7273 APOL STP     7      71.848  54.873  44.842    0.00     4.03
+ATOM   7273  POL STP     7      72.114  55.857  44.690    0.00     3.96
+ATOM  12358  POL STP     7      71.285  59.482  41.774    0.00     3.74
+ATOM  12358 APOL STP     7      71.719  60.172  41.189    0.00     3.63
+ATOM  12364  POL STP     7      70.719  59.834  41.589    0.00     3.74
+ATOM  12362 APOL STP     7      71.137  60.339  41.146    0.00     3.65
+ATOM  12364 APOL STP     7      70.731  60.249  41.273    0.00     3.70
+ATOM  12364 APOL STP     7      70.590  60.106  41.402    0.00     3.74
+ATOM   9470  POL STP     7      68.392  59.418  39.975    0.00     3.20
+ATOM  10001  POL STP     7      67.753  59.333  40.395    0.00     3.29
+ATOM   7263  POL STP     7      67.971  58.882  39.276    0.00     3.15
+ATOM  10001  POL STP     7      67.513  59.161  40.266    0.00     3.28
+ATOM   9470  POL STP     7      68.051  58.913  39.265    0.00     3.14
+ATOM   7263  POL STP     7      68.036  58.724  39.130    0.00     3.08
+ATOM   9473 APOL STP     7      68.171  58.706  39.058    0.00     3.05
+ATOM  12364 APOL STP     7      69.709  59.765  40.815    0.00     3.33
+ATOM  12362 APOL STP     7      68.203  58.687  39.045    0.00     3.03
+ATOM   9998  POL STP     7      66.817  59.877  40.689    0.00     3.04
+ATOM  10001  POL STP     7      66.583  59.548  40.459    0.00     3.09
+ATOM  10001  POL STP     7      66.673  59.351  40.336    0.00     3.14
+TER
+END

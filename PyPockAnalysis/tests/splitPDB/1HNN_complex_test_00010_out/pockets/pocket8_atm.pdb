@@ -1,0 +1,49 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     9:
+HEADER 0  - Pocket Score                      : 1.2700
+HEADER 1  - Drug Score                        : 0.0742
+HEADER 2  - Number of V. Vertices             :    38
+HEADER 3  - Mean alpha-sphere radius          : 3.7373
+HEADER 4  - Mean alpha-sphere SA              : 0.5668
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 48.8182
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Volume Score                      : 4.2727
+HEADER 9  - Real volume (approximation)       : 642.2577
+HEADER 10 - Charge Score                      :     1
+HEADER 11 - Local hydrophobic density Score   : 20.0000
+HEADER 12 - Number of apolar alpha sphere     :    21
+HEADER 13 - Proportion of apolar alpha sphere : 0.5526
+ATOM   1716  CE1 TYR B 113      59.554  53.560  41.704  1.00  0.00           C 0
+ATOM   1696   CG MET B 112      59.728  52.945  48.527  1.00  0.00           C 0
+ATOM   1693   CB MET B 112      59.222  53.824  47.386  1.00  0.00           C 0
+ATOM   1653    O ASN B 109      57.610  48.729  42.973  1.00  0.00           O 0
+ATOM    416    O TYR B  27      63.751  50.659  40.293  1.00  0.00           O 0
+ATOM    485    O GLY B  32      64.697  54.047  42.475  1.00  0.00           O 0
+ATOM    507  CD1 LEU B  34      60.623  56.213  44.407  1.00  0.00           C 0
+ATOM   1648  OD1 ASN B 109      56.547  48.770  46.429  1.00  0.00           O 0
+ATOM   1689    N MET B 112      56.866  53.186  47.212  1.00  0.00           N 0
+ATOM   1714  CD1 TYR B 113      58.335  53.890  42.309  1.00  0.00           C 0
+ATOM   1656   CA TRP B 110      55.684  50.866  43.270  1.00  0.00           C 0
+ATOM   1676    C TRP B 110      55.294  51.815  44.395  1.00  0.00           C 0
+ATOM   1678    N SER B 111      55.183  51.340  45.638  1.00  0.00           N 0
+ATOM    428   CD PRO B  29      67.970  50.783  43.086  1.00  0.00           C 0
+ATOM    431   CG PRO B  29      68.499  51.827  44.066  1.00  0.00           C 0
+ATOM   1700   CE MET B 112      60.487  52.136  50.980  1.00  0.00           C 0
+ATOM    421   CB ALA B  28      66.753  48.628  40.732  1.00  0.00           C 0
+ATOM    419   CA ALA B  28      66.532  50.128  40.553  1.00  0.00           C 0
+ATOM   1719   OH TYR B 113      61.341  54.020  40.171  1.00  0.00           O 0
+ATOM   1632   CZ PHE B 108      61.335  46.148  40.365  1.00  0.00           C 0
+ATOM   1634  CE2 PHE B 108      60.339  47.129  40.451  1.00  0.00           C 0
+ATOM   1669  CH2 TRP B 110      58.639  51.242  37.970  1.00  0.00           C 0
+ATOM   1667  CZ2 TRP B 110      58.015  49.996  38.100  1.00  0.00           C 0
+ATOM   1666  CE2 TRP B 110      57.008  49.857  39.063  1.00  0.00           C 0
+ATOM   1675  CD2 TRP B 110      56.614  50.895  39.947  1.00  0.00           C 0
+ATOM   1673  CE3 TRP B 110      57.215  52.144  39.720  1.00  0.00           C 0
+ATOM   1671  CZ3 TRP B 110      58.243  52.310  38.784  1.00  0.00           C 0
+ATOM    400   CB TYR B  27      62.530  51.055  37.633  1.00  0.00           C 0
+TER
+END

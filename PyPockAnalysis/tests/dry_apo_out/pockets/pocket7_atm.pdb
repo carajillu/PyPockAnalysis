@@ -1,0 +1,44 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     8:
+HEADER 0  - Pocket Score                      : 7.4099
+HEADER 1  - Drug Score                        : 0.0226
+HEADER 2  - Number of V. Vertices             :    37
+HEADER 3  - Mean alpha-sphere radius          : 4.0034
+HEADER 4  - Mean alpha-sphere SA              : 0.5669
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 19.6667
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Volume Score                      : 4.3333
+HEADER 9  - Real volume (approximation)       : 536.8007
+HEADER 10 - Charge Score                      :     0
+HEADER 11 - Local hydrophobic density Score   : 20.0000
+HEADER 12 - Number of apolar alpha sphere     :    24
+HEADER 13 - Proportion of apolar alpha sphere : 0.6486
+ATOM    555    O PRO A 550      65.964  66.204  42.959  1.00  0.00           O 0
+ATOM    576    O GLY A 552      66.184  63.584  39.139  1.00  0.00           O 0
+ATOM    618   CB TRP A 556      63.844  65.434  37.269  1.00  0.00           C 0
+ATOM    558   CA ASN A 551      68.414  65.974  41.839  1.00  0.00           C 0
+ATOM   3745  CE1 TYR A 756      68.054  65.644  36.439  1.00  0.00           C 0
+ATOM    622  CD1 TRP A 556      63.934  67.834  36.379  1.00  0.00           C 0
+ATOM    614    N TRP A 556      62.894  64.354  39.249  1.00  0.00           N 0
+ATOM    689   CD ARG A 559      60.654  69.504  40.529  1.00  0.00           C 0
+ATOM    616   CA TRP A 556      62.634  65.324  38.189  1.00  0.00           C 0
+ATOM    695  NH1 ARG A 559      61.984  71.744  39.439  1.00  0.00           N 0
+ATOM   1825   CD ILE A 633      57.784  64.774  43.279  1.00  0.00           C 0
+ATOM    613    O PRO A 555      60.854  64.574  40.219  1.00  0.00           O 0
+ATOM    683   CB ARG A 559      59.444  67.384  39.989  1.00  0.00           C 0
+ATOM    686   CG ARG A 559      59.374  68.704  40.729  1.00  0.00           C 0
+ATOM   1764  CE1 HIS A 629      60.504  63.274  44.839  1.00  0.00           C 0
+ATOM    549   CB PRO A 550      66.794  66.464  46.069  1.00  0.00           C 0
+ATOM    692   NE ARG A 559      60.514  70.884  40.989  1.00  0.00           N 0
+ATOM   1822  CG1 ILE A 633      57.284  65.084  44.679  1.00  0.00           C 0
+ATOM    607   CB PRO A 555      63.544  63.514  42.119  1.00  0.00           C 0
+ATOM    612    C PRO A 555      61.984  64.054  40.179  1.00  0.00           C 0
+ATOM    568    C ASN A 551      68.714  64.814  40.899  1.00  0.00           C 0
+ATOM    560   CB ASN A 551      69.564  66.984  41.839  1.00  0.00           C 0
+ATOM    569    O ASN A 551      69.634  64.874  40.089  1.00  0.00           O 0
+TER
+END

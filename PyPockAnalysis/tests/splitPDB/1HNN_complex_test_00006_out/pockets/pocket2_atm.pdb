@@ -1,0 +1,52 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     3:
+HEADER 0  - Pocket Score                      : 12.5704
+HEADER 1  - Drug Score                        : 0.4106
+HEADER 2  - Number of V. Vertices             :    52
+HEADER 3  - Mean alpha-sphere radius          : 3.3258
+HEADER 4  - Mean alpha-sphere SA              : 0.3864
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 46.3077
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Volume Score                      : 4.0769
+HEADER 9  - Real volume (approximation)       : 192.8590
+HEADER 10 - Charge Score                      :     1
+HEADER 11 - Local hydrophobic density Score   : 38.8261
+HEADER 12 - Number of apolar alpha sphere     :    46
+HEADER 13 - Proportion of apolar alpha sphere : 0.8846
+ATOM   2593   SG CYS B 170      54.939  54.022  23.269  1.00  0.00           S 0
+ATOM   2596    O CYS B 170      58.157  54.142  21.648  1.00  0.00           O 0
+ATOM   4158   N1 SAH f 269      54.108  50.758  19.786  1.00  0.00           N 0
+ATOM   2264  CG1 VAL B 146      52.375  54.020  18.348  1.00  0.00           C 0
+ATOM   2268  CG2 VAL B 146      54.198  53.548  16.669  1.00  0.00           C 0
+ATOM   2599   CA LEU B 171      58.130  56.695  20.411  1.00  0.00           C 0
+ATOM   2610  CD2 LEU B 171      55.584  58.259  19.037  1.00  0.00           C 0
+ATOM   2597    N LEU B 171      57.862  56.353  21.794  1.00  0.00           N 0
+ATOM    968  CG2 ILE B  65      51.545  55.915  23.470  1.00  0.00           C 0
+ATOM   2866   CD ILE B 188      50.245  56.623  20.302  1.00  0.00           C 0
+ATOM   2863  CG1 ILE B 188      50.971  57.640  19.425  1.00  0.00           C 0
+ATOM   2604   CG LEU B 171      56.484  58.694  20.190  1.00  0.00           C 0
+ATOM   3020  CD2 LEU B 198      51.854  63.824  22.322  1.00  0.00           C 0
+ATOM   2606  CD1 LEU B 171      56.515  60.219  20.231  1.00  0.00           C 0
+ATOM   3058  CD2 LEU B 200      56.927  63.507  23.215  1.00  0.00           C 0
+ATOM   3054  CD1 LEU B 200      56.834  61.569  24.702  1.00  0.00           C 0
+ATOM   3049   CB LEU B 200      55.876  63.696  25.532  1.00  0.00           C 0
+ATOM   2549   CB SER B 167      53.885  59.450  25.737  1.00  0.00           C 0
+ATOM   2814  CD1 LEU B 185      53.354  63.064  19.134  1.00  0.00           C 0
+ATOM   2552   OG SER B 167      54.677  58.541  25.007  1.00  0.00           O 0
+ATOM   2859  CG2 ILE B 188      50.201  59.822  20.420  1.00  0.00           C 0
+ATOM   3016  CD1 LEU B 198      51.232  62.644  24.374  1.00  0.00           C 0
+ATOM   2857   CB ILE B 188      50.323  58.993  19.145  1.00  0.00           C 0
+ATOM   2807   CA LEU B 185      53.291  61.022  16.732  1.00  0.00           C 0
+ATOM    975   CD ILE B  65      50.071  58.430  23.833  1.00  0.00           C 0
+ATOM   2590   CB CYS B 170      56.049  55.240  24.017  1.00  0.00           C 0
+ATOM   4156   C6 SAH f 269      55.367  50.364  19.539  1.00  0.00           C 0
+ATOM   2647  CG1 VAL B 174      58.212  52.798  17.344  1.00  0.00           C 0
+ATOM   2664   OG SER B 175      59.879  56.487  16.304  1.00  0.00           O 0
+ATOM   2615    O LEU B 171      59.814  55.459  19.114  1.00  0.00           O 0
+ATOM   2799   CB ALA B 184      55.139  57.128  15.701  1.00  0.00           C 0
+TER
+END

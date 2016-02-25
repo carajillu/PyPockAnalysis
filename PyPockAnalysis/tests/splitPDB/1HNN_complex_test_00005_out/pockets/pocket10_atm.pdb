@@ -1,0 +1,46 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket    11:
+HEADER 0  - Pocket Score                      : -1.3234
+HEADER 1  - Drug Score                        : 0.0119
+HEADER 2  - Number of V. Vertices             :    39
+HEADER 3  - Mean alpha-sphere radius          : 4.2453
+HEADER 4  - Mean alpha-sphere SA              : 0.6813
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 26.7500
+HEADER 7  - Polarity Score                    :     2
+HEADER 8  - Volume Score                      : 4.0000
+HEADER 9  - Real volume (approximation)       : 764.0447
+HEADER 10 - Charge Score                      :     0
+HEADER 11 - Local hydrophobic density Score   : 4.0000
+HEADER 12 - Number of apolar alpha sphere     :     5
+HEADER 13 - Proportion of apolar alpha sphere : 0.1282
+ATOM    890  NH1 ARG B  60      35.632  57.490  29.933  1.00  0.00           N 0
+ATOM    884   CD ARG B  60      34.458  60.088  31.123  1.00  0.00           C 0
+ATOM   2438   CB PRO B 159      36.020  56.123  26.526  1.00  0.00           C 0
+ATOM    887   NE ARG B  60      34.076  58.684  31.277  1.00  0.00           N 0
+ATOM    889   CZ ARG B  60      34.627  57.553  30.816  1.00  0.00           C 0
+ATOM    908  OG1 THR B  61      37.703  59.431  28.390  1.00  0.00           O 0
+ATOM   2463    O LEU B 160      35.634  59.108  21.565  1.00  0.00           O 0
+ATOM   2445    N LEU B 160      36.755  57.250  23.380  1.00  0.00           N 0
+ATOM   2477    O PRO B 161      38.289  60.842  24.208  1.00  0.00           O 0
+ATOM   2462    C LEU B 160      36.766  59.249  22.022  1.00  0.00           C 0
+ATOM   2443    C PRO B 159      37.239  56.560  24.416  1.00  0.00           C 0
+ATOM   2951   NE ARG B 193      38.167  66.415  25.458  1.00  0.00           N 0
+ATOM   2942   CB ARG B 193      39.635  65.771  22.417  1.00  0.00           C 0
+ATOM   2468   CG PRO B 161      38.003  62.465  20.775  1.00  0.00           C 0
+ATOM   2497  OD2 ASP B 163      38.037  64.021  26.858  1.00  0.00           O 0
+ATOM   2465   CD PRO B 161      36.881  61.450  20.974  1.00  0.00           C 0
+ATOM   2957  NH2 ARG B 193      36.450  66.208  26.809  1.00  0.00           N 0
+ATOM   2953   CZ ARG B 193      37.042  66.993  25.899  1.00  0.00           C 0
+ATOM   2975    O PRO B 194      40.117  69.349  22.496  1.00  0.00           O 0
+ATOM   2954  NH1 ARG B 193      36.579  68.169  25.453  1.00  0.00           N 0
+ATOM   2948   CD ARG B 193      39.181  67.028  24.599  1.00  0.00           C 0
+ATOM   2963   CD PRO B 194      39.855  67.362  19.436  1.00  0.00           C 0
+ATOM   2966   CG PRO B 194      39.626  68.632  18.621  1.00  0.00           C 0
+ATOM   2969   CB PRO B 194      40.122  69.764  19.516  1.00  0.00           C 0
+ATOM   2496  OD1 ASP B 163      37.942  63.186  28.850  1.00  0.00           O 0
+TER
+END

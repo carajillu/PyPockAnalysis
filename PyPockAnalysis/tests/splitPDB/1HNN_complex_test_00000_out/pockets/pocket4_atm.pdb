@@ -1,0 +1,51 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     5:
+HEADER 0  - Pocket Score                      : 3.7542
+HEADER 1  - Drug Score                        : 0.0118
+HEADER 2  - Number of V. Vertices             :    45
+HEADER 3  - Mean alpha-sphere radius          : 3.9803
+HEADER 4  - Mean alpha-sphere SA              : 0.6546
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 19.8750
+HEADER 7  - Polarity Score                    :     6
+HEADER 8  - Volume Score                      : 5.3750
+HEADER 9  - Real volume (approximation)       : 763.7720
+HEADER 10 - Charge Score                      :     1
+HEADER 11 - Local hydrophobic density Score   : 16.4444
+HEADER 12 - Number of apolar alpha sphere     :    18
+HEADER 13 - Proportion of apolar alpha sphere : 0.4000
+ATOM   1896    O GLU B 125      49.220  60.429  50.962  1.00  0.00           O 0
+ATOM   1880    C GLY B 124      47.410  63.031  52.498  1.00  0.00           C 0
+ATOM   1881    O GLY B 124      46.645  62.288  53.110  1.00  0.00           O 0
+ATOM   1877   CA GLY B 124      47.954  64.329  53.088  1.00  0.00           C 0
+ATOM   1875    N GLY B 124      48.311  65.320  52.102  1.00  0.00           N 0
+ATOM   1802  CD1 LEU B 119      56.216  63.702  51.715  1.00  0.00           C 0
+ATOM   1792    O CYS B 118      51.918  64.114  48.211  1.00  0.00           O 0
+ATOM   1882    N GLU B 125      47.591  62.764  51.205  1.00  0.00           N 0
+ATOM   1795   CA LEU B 119      54.552  63.967  48.841  1.00  0.00           C 0
+ATOM   1793    N LEU B 119      53.845  62.955  48.100  1.00  0.00           N 0
+ATOM   1797   CB LEU B 119      55.920  63.410  49.241  1.00  0.00           C 0
+ATOM   1754    O GLN B 115      54.917  60.151  48.187  1.00  0.00           O 0
+ATOM   1786   CB CYS B 118      51.209  61.118  48.319  1.00  0.00           C 0
+ATOM   1789   SG CYS B 118      50.268  59.668  47.770  1.00  0.00           S 0
+ATOM   1740   CA GLN B 115      54.813  57.848  48.334  1.00  0.00           C 0
+ATOM   1908    N TRP B 127      49.613  56.768  50.090  1.00  0.00           N 0
+ATOM   1912   CB TRP B 127      51.598  55.490  49.220  1.00  0.00           C 0
+ATOM   1916  CD1 TRP B 127      52.064  54.969  51.636  1.00  0.00           C 0
+ATOM   1742   CB GLN B 115      55.771  57.067  49.233  1.00  0.00           C 0
+ATOM   1745   CG GLN B 115      55.127  55.882  49.959  1.00  0.00           C 0
+ATOM   1750  NE2 GLN B 115      56.257  55.081  51.960  1.00  0.00           N 0
+ATOM   1851    C GLY B 122      49.982  67.733  50.459  1.00  0.00           C 0
+ATOM   1848   CA GLY B 122      51.291  67.710  49.683  1.00  0.00           C 0
+ATOM   1852    O GLY B 122      49.883  68.292  51.550  1.00  0.00           O 0
+ATOM   1811    O LEU B 119      54.433  66.328  48.682  1.00  0.00           O 0
+ATOM   1904   SG CYS B 126      48.200  55.746  52.975  1.00  0.00           S 0
+ATOM   1899   CA CYS B 126      48.071  58.044  51.552  1.00  0.00           C 0
+ATOM   1901   CB CYS B 126      47.189  57.137  52.407  1.00  0.00           C 0
+ATOM   1897    N CYS B 126      47.354  59.259  51.232  1.00  0.00           N 0
+ATOM   1895    C GLU B 125      47.992  60.395  50.938  1.00  0.00           C 0
+TER
+END

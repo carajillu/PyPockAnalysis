@@ -1,0 +1,58 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     2:
+HEADER 0  - Pocket Score                      : 8.0148
+HEADER 1  - Drug Score                        : 0.0272
+HEADER 2  - Number of V. Vertices             :    57
+HEADER 3  - Mean alpha-sphere radius          : 3.3202
+HEADER 4  - Mean alpha-sphere SA              : 0.4092
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 28.7647
+HEADER 7  - Polarity Score                    :     8
+HEADER 8  - Volume Score                      : 3.9412
+HEADER 9  - Real volume (approximation)       : 192.1610
+HEADER 10 - Charge Score                      :    -1
+HEADER 11 - Local hydrophobic density Score   : 23.6429
+HEADER 12 - Number of apolar alpha sphere     :    28
+HEADER 13 - Proportion of apolar alpha sphere : 0.4912
+ATOM   4007  CD2 PHE B 260      61.036  65.736  25.696  1.00  0.00           C 0
+ATOM   3082    O ILE B 201      59.344  60.834  26.602  1.00  0.00           O 0
+ATOM   3085   CA GLY B 202      62.077  61.340  26.467  1.00  0.00           C 0
+ATOM   3083    N GLY B 202      61.083  62.068  27.231  1.00  0.00           N 0
+ATOM   3081    C ILE B 201      59.777  61.793  27.237  1.00  0.00           C 0
+ATOM   3052   CG LEU B 200      56.833  63.385  24.304  1.00  0.00           C 0
+ATOM   2746   CZ PHE B 181      60.040  62.125  19.973  1.00  0.00           C 0
+ATOM   3447  CG1 VAL B 226      59.575  66.019  21.580  1.00  0.00           C 0
+ATOM   3058  CD2 LEU B 200      56.950  64.083  22.952  1.00  0.00           C 0
+ATOM   3113  CD2 LEU B 204      66.323  66.414  23.778  1.00  0.00           C 0
+ATOM   3451  CG2 VAL B 226      61.681  65.141  20.625  1.00  0.00           C 0
+ATOM   3379  CG2 VAL B 221      65.548  63.882  20.940  1.00  0.00           C 0
+ATOM   3099    O ALA B 203      65.490  63.209  24.506  1.00  0.00           O 0
+ATOM   3998   CG PHE B 260      62.316  66.111  26.121  1.00  0.00           C 0
+ATOM   4001  CE1 PHE B 260      62.081  68.251  25.125  1.00  0.00           C 0
+ATOM   3999  CD1 PHE B 260      62.801  67.418  25.991  1.00  0.00           C 0
+ATOM   2744  CE1 PHE B 181      60.906  61.036  19.818  1.00  0.00           C 0
+ATOM   2628  OE2 GLU B 172      62.919  59.292  24.173  1.00  0.00           O 0
+ATOM   3054  CD1 LEU B 200      56.368  61.984  23.917  1.00  0.00           C 0
+ATOM   2552   OG SER B 167      54.461  58.255  24.683  1.00  0.00           O 0
+ATOM   2597    N LEU B 171      57.976  56.670  21.918  1.00  0.00           N 0
+ATOM   2586    N CYS B 170      58.370  55.854  24.728  1.00  0.00           N 0
+ATOM   2566    N PHE B 169      59.300  57.519  26.747  1.00  0.00           N 0
+ATOM   2601   CB LEU B 171      58.101  58.632  20.449  1.00  0.00           C 0
+ATOM   2604   CG LEU B 171      56.662  59.128  20.558  1.00  0.00           C 0
+ATOM   2616    N GLU B 172      60.695  56.804  21.076  1.00  0.00           N 0
+ATOM   2623   CG GLU B 172      62.562  57.151  23.229  1.00  0.00           C 0
+ATOM   2568   CA PHE B 169      60.271  56.760  25.983  1.00  0.00           C 0
+ATOM   2584    C PHE B 169      59.687  55.817  24.940  1.00  0.00           C 0
+ATOM   2555    O SER B 167      56.150  60.113  27.109  1.00  0.00           O 0
+ATOM   2606  CD1 LEU B 171      56.474  60.639  20.656  1.00  0.00           C 0
+ATOM   3457    N ARG B 227      60.071  69.512  20.154  1.00  0.00           N 0
+ATOM   3445   CB VAL B 226      60.904  66.416  20.942  1.00  0.00           C 0
+ATOM   3441    N VAL B 226      62.088  67.713  19.220  1.00  0.00           N 0
+ATOM   3410    O GLU B 223      64.347  71.051  22.666  1.00  0.00           O 0
+ATOM   3395    O SER B 222      66.243  68.416  20.673  1.00  0.00           O 0
+ATOM   4003   CZ PHE B 260      60.826  67.877  24.631  1.00  0.00           C 0
+TER
+END

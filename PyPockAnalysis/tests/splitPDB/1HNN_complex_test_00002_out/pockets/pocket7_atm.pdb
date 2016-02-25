@@ -1,0 +1,46 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     8:
+HEADER 0  - Pocket Score                      : 1.5579
+HEADER 1  - Drug Score                        : 0.0169
+HEADER 2  - Number of V. Vertices             :    37
+HEADER 3  - Mean alpha-sphere radius          : 3.3518
+HEADER 4  - Mean alpha-sphere SA              : 0.4158
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 29.6000
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Volume Score                      : 4.5000
+HEADER 9  - Real volume (approximation)       : 225.6056
+HEADER 10 - Charge Score                      :    -1
+HEADER 11 - Local hydrophobic density Score   : 10.7692
+HEADER 12 - Number of apolar alpha sphere     :    13
+HEADER 13 - Proportion of apolar alpha sphere : 0.3514
+ATOM   2290    O HIS B 147      50.822  51.951  10.752  1.00  0.00           O 0
+ATOM   2846  CE1 HIS B 187      49.682  55.526  10.624  1.00  0.00           C 0
+ATOM      6    O ACE B   0      50.253  54.905   4.506  1.00  0.00           O 0
+ATOM   2312   CG PRO B 149      45.960  52.963   8.978  1.00  0.00           C 0
+ATOM      8   CD PRO B   1      51.685  56.483   6.189  1.00  0.00           C 0
+ATOM     48   CB ALA B   4      54.138  52.550   6.437  1.00  0.00           C 0
+ATOM     86  OE1 GLN B   7      56.035  55.064   9.631  1.00  0.00           O 0
+ATOM     11   CG PRO B   1      52.932  57.193   6.711  1.00  0.00           C 0
+ATOM   2848  NE2 HIS B 187      50.109  56.761  10.352  1.00  0.00           N 0
+ATOM   2775   CB ARG B 183      55.174  58.332  10.487  1.00  0.00           C 0
+ATOM   2278   CB HIS B 147      53.268  50.670  12.356  1.00  0.00           C 0
+ATOM     46   CA ALA B   4      55.638  52.560   6.715  1.00  0.00           C 0
+ATOM     53    O ALA B   4      56.458  50.489   7.536  1.00  0.00           O 0
+ATOM     79   CB GLN B   7      57.675  52.457  10.624  1.00  0.00           C 0
+ATOM   2276   CA HIS B 147      52.170  51.680  12.678  1.00  0.00           C 0
+ATOM   2287  CD2 HIS B 147      54.939  52.236  13.493  1.00  0.00           C 0
+ATOM     87  NE2 GLN B   7      56.146  54.972  11.893  1.00  0.00           N 0
+ATOM   2273    O VAL B 146      51.879  53.985  14.225  1.00  0.00           O 0
+ATOM   2794    O ARG B 183      52.850  58.533  12.810  1.00  0.00           O 0
+ATOM   2849  CD2 HIS B 187      50.179  57.345  11.616  1.00  0.00           C 0
+ATOM     85   CD GLN B   7      56.606  54.723  10.665  1.00  0.00           C 0
+ATOM   2281   CG HIS B 147      54.598  51.016  12.968  1.00  0.00           C 0
+ATOM   2315   CB PRO B 149      45.267  54.007   9.849  1.00  0.00           C 0
+ATOM     92    N ALA B   8      57.773  49.358  10.003  1.00  0.00           N 0
+ATOM     96   CB ALA B   8      56.596  47.552   8.886  1.00  0.00           C 0
+TER
+END

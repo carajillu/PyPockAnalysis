@@ -1,0 +1,45 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     9:
+HEADER 0  - Pocket Score                      : 1.4499
+HEADER 1  - Drug Score                        : 0.0044
+HEADER 2  - Number of V. Vertices             :    41
+HEADER 3  - Mean alpha-sphere radius          : 4.3405
+HEADER 4  - Mean alpha-sphere SA              : 0.6191
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : -6.5000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Volume Score                      : 4.1667
+HEADER 9  - Real volume (approximation)       : 591.8550
+HEADER 10 - Charge Score                      :    -2
+HEADER 11 - Local hydrophobic density Score   : 10.6667
+HEADER 12 - Number of apolar alpha sphere     :    12
+HEADER 13 - Proportion of apolar alpha sphere : 0.2927
+ATOM   1942   CD GLN B 128      47.831  52.117  53.853  1.00  0.00           C 0
+ATOM   1923  CH2 TRP B 127      52.776  51.078  51.432  1.00  0.00           C 0
+ATOM   1939   CG GLN B 128      48.422  52.673  52.566  1.00  0.00           C 0
+ATOM   1944  NE2 GLN B 128      48.645  51.766  54.851  1.00  0.00           N 0
+ATOM   1925  CZ3 TRP B 127      52.247  51.363  50.167  1.00  0.00           C 0
+ATOM   1943  OE1 GLN B 128      46.635  51.885  54.015  1.00  0.00           O 0
+ATOM   2008   CD ARG B 132      42.262  49.900  47.205  1.00  0.00           C 0
+ATOM   2005   CG ARG B 132      43.122  51.045  47.733  1.00  0.00           C 0
+ATOM   1570  OE1 GLU B 103      44.969  44.627  46.180  1.00  0.00           O 0
+ATOM   1571  OE2 GLU B 103      47.124  44.414  46.576  1.00  0.00           O 0
+ATOM   1997    O GLU B 131      46.040  51.558  43.691  1.00  0.00           O 0
+ATOM   2074  NH1 ARG B 135      48.179  48.271  44.597  1.00  0.00           N 0
+ATOM   1996    C GLU B 131      46.234  52.115  44.770  1.00  0.00           C 0
+ATOM   2068   CD ARG B 135      45.680  47.878  42.832  1.00  0.00           C 0
+ATOM   1998    N ARG B 132      45.254  52.403  45.629  1.00  0.00           N 0
+ATOM   2000   CA ARG B 132      43.834  52.121  45.563  1.00  0.00           C 0
+ATOM   1987   CB GLU B 131      48.456  51.762  45.913  1.00  0.00           C 0
+ATOM   1948    O GLN B 128      46.341  53.232  48.288  1.00  0.00           O 0
+ATOM   1936   CB GLN B 128      47.305  52.984  51.574  1.00  0.00           C 0
+ATOM   1934   CA GLN B 128      47.743  53.437  50.184  1.00  0.00           C 0
+ATOM   1995  OE2 GLU B 131      51.402  50.422  46.854  1.00  0.00           O 0
+ATOM   1993   CD GLU B 131      50.679  50.420  45.834  1.00  0.00           C 0
+ATOM   1994  OE1 GLU B 131      50.489  49.355  45.208  1.00  0.00           O 0
+ATOM   1927  CE3 TRP B 127      51.815  52.670  49.911  1.00  0.00           C 0
+TER
+END

@@ -1,0 +1,44 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     8:
+HEADER 0  - Pocket Score                      : 1.9471
+HEADER 1  - Drug Score                        : 0.0484
+HEADER 2  - Number of V. Vertices             :    40
+HEADER 3  - Mean alpha-sphere radius          : 4.5295
+HEADER 4  - Mean alpha-sphere SA              : 0.7018
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 46.0000
+HEADER 7  - Polarity Score                    :     3
+HEADER 8  - Volume Score                      : 5.0000
+HEADER 9  - Real volume (approximation)       : 470.6041
+HEADER 10 - Charge Score                      :     0
+HEADER 11 - Local hydrophobic density Score   : 10.0000
+HEADER 12 - Number of apolar alpha sphere     :    11
+HEADER 13 - Proportion of apolar alpha sphere : 0.2750
+ATOM   1763  ND1 HIS B 116      60.368  61.222  45.441  1.00  0.00           N 0
+ATOM   1705    O MET B 112      57.886  56.728  46.174  1.00  0.00           O 0
+ATOM    502   CB LEU B  34      62.640  57.924  45.090  1.00  0.00           C 0
+ATOM    516    O LEU B  34      63.825  60.277  46.551  1.00  0.00           O 0
+ATOM   1693   CB MET B 112      59.602  54.280  46.809  1.00  0.00           C 0
+ATOM    519   CA CYS B  35      66.331  59.930  47.655  1.00  0.00           C 0
+ATOM    517    N CYS B  35      65.700  59.106  46.638  1.00  0.00           N 0
+ATOM    521   CB CYS B  35      67.087  58.983  48.580  1.00  0.00           C 0
+ATOM    515    C LEU B  34      64.490  59.335  46.125  1.00  0.00           C 0
+ATOM   1699   SD MET B 112      61.810  53.171  48.043  1.00  0.00           S 0
+ATOM   1696   CG MET B 112      60.026  53.452  48.025  1.00  0.00           C 0
+ATOM   1700   CE MET B 112      61.952  52.480  49.708  1.00  0.00           C 0
+ATOM   1750  NE2 GLN B 115      56.257  55.081  51.960  1.00  0.00           N 0
+ATOM   1749  OE1 GLN B 115      56.982  54.302  50.023  1.00  0.00           O 0
+ATOM    494  OD1 ASP B  33      67.380  56.179  46.227  1.00  0.00           O 0
+ATOM    498    N LEU B  34      64.852  57.420  44.527  1.00  0.00           N 0
+ATOM   1742   CB GLN B 115      55.771  57.067  49.233  1.00  0.00           C 0
+ATOM   1755    N HIS B 116      56.479  59.030  46.955  1.00  0.00           N 0
+ATOM   1806  CD2 LEU B 119      58.176  63.684  50.167  1.00  0.00           C 0
+ATOM   1757   CA HIS B 116      56.980  60.293  46.472  1.00  0.00           C 0
+ATOM   1748   CD GLN B 115      56.196  55.034  50.622  1.00  0.00           C 0
+ATOM   1759   CB HIS B 116      58.128  60.007  45.498  1.00  0.00           C 0
+ATOM   1691   CA MET B 112      58.093  54.518  46.879  1.00  0.00           C 0
+TER
+END

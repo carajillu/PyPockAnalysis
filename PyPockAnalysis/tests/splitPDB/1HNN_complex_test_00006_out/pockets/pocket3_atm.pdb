@@ -1,0 +1,60 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     4:
+HEADER 0  - Pocket Score                      : 10.7270
+HEADER 1  - Drug Score                        : 0.0125
+HEADER 2  - Number of V. Vertices             :    65
+HEADER 3  - Mean alpha-sphere radius          : 3.8802
+HEADER 4  - Mean alpha-sphere SA              : 0.5017
+HEADER 5  - Mean B-factor                     : 0.0000
+HEADER 6  - Hydrophobicity Score              : 13.9231
+HEADER 7  - Polarity Score                    :     7
+HEADER 8  - Volume Score                      : 2.9231
+HEADER 9  - Real volume (approximation)       : 659.6476
+HEADER 10 - Charge Score                      :     0
+HEADER 11 - Local hydrophobic density Score   : 10.0000
+HEADER 12 - Number of apolar alpha sphere     :    11
+HEADER 13 - Proportion of apolar alpha sphere : 0.1692
+ATOM   1178  CE1 HIS B  80      44.231  68.404  39.648  1.00  0.00           C 0
+ATOM   1168    O SER B  79      42.348  64.909  40.756  1.00  0.00           O 0
+ATOM   1869   NZ LYS B 123      44.931  64.315  45.370  1.00  0.00           N 0
+ATOM   1863   CD LYS B 123      45.271  65.798  47.328  1.00  0.00           C 0
+ATOM   1835   CB GLU B 121      50.197  65.572  45.507  1.00  0.00           C 0
+ATOM   1833   CA GLU B 121      51.162  66.729  45.749  1.00  0.00           C 0
+ATOM   1842  OE1 GLU B 121      47.615  65.464  43.234  1.00  0.00           O 0
+ATOM   1838   CG GLU B 121      48.778  66.070  45.245  1.00  0.00           C 0
+ATOM    742    O ALA B  49      51.689  68.903  39.003  1.00  0.00           O 0
+ATOM    737   CB ALA B  49      53.657  66.739  40.572  1.00  0.00           C 0
+ATOM    798   CB ALA B  53      50.386  72.025  39.927  1.00  0.00           C 0
+ATOM    796   CA ALA B  53      49.151  71.518  39.187  1.00  0.00           C 0
+ATOM   1845    O GLU B 121      50.229  68.643  46.887  1.00  0.00           O 0
+ATOM   1180  NE2 HIS B  80      45.260  67.555  39.807  1.00  0.00           N 0
+ATOM    793    O PHE B  52      47.515  69.385  38.417  1.00  0.00           O 0
+ATOM   1857   CB LYS B 123      46.245  67.349  49.174  1.00  0.00           C 0
+ATOM   1162   CB SER B  79      45.284  64.103  41.491  1.00  0.00           C 0
+ATOM    803    O ALA B  53      48.099  73.589  39.268  1.00  0.00           O 0
+ATOM    818    N GLY B  55      45.377  72.980  37.026  1.00  0.00           N 0
+ATOM   1830    O ILE B 120      53.507  68.337  45.657  1.00  0.00           O 0
+ATOM    802    C ALA B  53      48.437  72.681  38.513  1.00  0.00           C 0
+ATOM    820   CA GLY B  55      43.930  73.038  37.003  1.00  0.00           C 0
+ATOM    794    N ALA B  53      49.459  70.428  38.282  1.00  0.00           N 0
+ATOM   1781    O ALA B 117      52.729  62.944  45.122  1.00  0.00           O 0
+ATOM   1133   OG SER B  76      51.488  63.697  39.925  1.00  0.00           O 0
+ATOM   1822  CG1 ILE B 120      55.110  65.252  44.065  1.00  0.00           C 0
+ATOM   1841   CD GLU B 121      48.104  65.071  44.315  1.00  0.00           C 0
+ATOM   1977   NZ LYS B 130      48.717  61.104  44.179  1.00  0.00           N 0
+ATOM   1843  OE2 GLU B 121      47.867  63.944  44.801  1.00  0.00           O 0
+ATOM   1128   CA SER B  76      49.492  62.367  39.595  1.00  0.00           C 0
+ATOM   1125    O LEU B  75      49.165  60.220  41.519  1.00  0.00           O 0
+ATOM   1776   CB ALA B 117      53.555  60.270  43.442  1.00  0.00           C 0
+ATOM   1831    N GLU B 121      52.539  66.299  45.884  1.00  0.00           N 0
+ATOM    778   CB PHE B  52      48.958  66.985  37.188  1.00  0.00           C 0
+ATOM   1130   CB SER B  76      50.523  63.305  38.974  1.00  0.00           C 0
+ATOM   1136    O SER B  76      47.253  63.060  39.276  1.00  0.00           O 0
+ATOM    735   CA ALA B  49      53.091  66.999  39.179  1.00  0.00           C 0
+ATOM    792    C PHE B  52      48.627  69.457  37.898  1.00  0.00           C 0
+ATOM   1182  CD2 HIS B  80      45.042  66.401  39.082  1.00  0.00           C 0
+TER
+END
